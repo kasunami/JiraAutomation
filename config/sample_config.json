@@ -1,0 +1,27 @@
+{
+  "statuses": [
+    {"name": "To Do", "id": 1},
+    {"name": "In Progress", "id": 2},
+    {"name": "Code Review", "id": 3},
+    {"name": "Testing", "id": 4},
+    {"name": "Done", "id": 5}
+  ],
+  "include": {
+    "ticket_keys": ["PROJECT-123", "PROJECT-456"],
+    "statuses": ["To Do", "In Progress"],
+    "linked_branch_status": {
+      "github": ["merged"],
+      "gitlab": ["merged"],
+      "bitbucket": ["merged"]
+    }
+  },
+  "exclude": {
+    "ticket_keys": ["PROJECT-789", "PROJECT-101"],
+    "statuses": ["Done"],
+    "linked_branch_status": {
+      "github": ["open", "closed"],
+      "gitlab": ["open"],
+      "bitbucket": ["declined"]
+    }
+  }
+}
